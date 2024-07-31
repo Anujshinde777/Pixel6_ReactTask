@@ -1,6 +1,6 @@
 import React from "react";
 
-const Loader = ({ name }) => {
+const Loader = () => {
   return (
     <>
       <style>

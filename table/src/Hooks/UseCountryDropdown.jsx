@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { BASE_API } from "../Constant/Fixed";
 
 const useCountryDropdown = (limit = 300, initialSkip = 0) => {
   const [countries, setCountries] = useState([]);
@@ -11,9 +12,7 @@ const useCountryDropdown = (limit = 300, initialSkip = 0) => {
   const fetchCountries = async () => {
  
     try {
-      const response = await fetch(
-        `https://dummyjson.com/users`
-      );
+      const response = await fetch(`${BASE_API}`);
       if (!response.ok) throw new Error("Failed to fetch data");
 
       const data = await response.json();
