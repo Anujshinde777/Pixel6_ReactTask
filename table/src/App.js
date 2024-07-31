@@ -1,10 +1,13 @@
-import logo from './logo.svg';
+ 
 import './App.css';
-
+import Header from './component/Header';
+import Main from './component/Main';
+ 
 function App() {
   return (
-    <div  >
-     <h1 className="w-full text-center bg-red-400">hi </h1>
+    <div className='flex flex-col p-4 m-3 gap-6' >
+      <Header />
+      <Main/>
     </div>
   );
 }
